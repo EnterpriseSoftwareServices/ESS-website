@@ -32,11 +32,13 @@ def sendMail(fro, subject, body):
   msg['Subject'] = subject
   print msg.as_string()
 
-  msg.attach( MIMEText(body, "html", "utf-8"))
+  body = "Email from: "+fro+"\n\n\n\nBody:\n" + body
+
+  msg.attach( MIMEText(body, "text", "utf-8"))
 
   #smtpserver.set_debuglevel(1)
   smtpserver.ehlo()
   smtpserver.starttls()
   smtpserver.login(username, email_pwd)    
-  smtpserver.sendmail(username, to, msg.as_string() )
+  smtpserver.sendmail(fro, to, msg.as_string() )
   smtpserver.close()
