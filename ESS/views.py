@@ -30,7 +30,7 @@ def redirectWithoutSlash(request, urlendpoint=None):
 
 def index(request):
     template = django.template.loader.get_template("index.html")
-    ctxt = {}
+    ctxt = {"recaptcha-key": settings.RECAPTCHAPUBLIC}
     context = RequestContext(request, ctxt)
     html = template.render(context)
     return HttpResponse(html)
