@@ -23,10 +23,8 @@ urlpatterns = [
     url(r'^(?P<urlendpoint>.*)\/$', views.redirectWithoutSlash),
     url(r'^$', views.index),
 
-    url(r'^(?P<pageName>.*?)$', views.servePage),
-
     url(r'^api/submitContact', views.submitContact),
-    url(r'^', views.redirectToIndex),
 
+    url(r'^(?P<pageName>.*?)$', views.servePage),
 
 ]

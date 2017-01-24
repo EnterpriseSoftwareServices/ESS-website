@@ -5,19 +5,50 @@ function validateEmail(email) {
   return re.test(email);
 }
 
+function enableBtn(data) {
+  $('#recaptcha-response').val(data);
+  $('#submitButton').prop("disabled", false);
+}
+
+function displayErrorMessage(msg) {
+    $('#errorMessages')
+      .css({
+        'display':"none",
+        'color': "red",
+        'font-weight': "bold"
+      })
+      .html(msg)
+      .fadeIn(500, "linear", setTimeout(function(){
+        $('#errorMessages').fadeOut(500);
+      }, 5000));
+};
+
 function submitContact() {
   var title = $('#title').val();
   var email = $('#email').val();
   var confirmEmail = $('#confirmEmail').val();
   var body = $('#body').val();
+  var csrf = $('[name=csrfmiddlewaretoken]')[0].value;
+
+  var recaptchaResponse = $('#recaptcha-response').val();
+
+  if (title == "") {
+    displayErrorMessage("Please enter a title for the email");
+    return
+  }
 
   if (email != confirmEmail) {
-    displayError("The provided emails don't match!");
+    displayErrorMessage("The provided emails don't match!");
     return
   }
 
   if (!validateEmail(email)) {
-    displayError("Please double-check your email.");
+    displayErrorMessage("Please double-check your email.");
+    return
+  }
+
+  if (body == "") {
+    displayErrorMessage("The email body is empty!");
     return
   }
 
@@ -26,13 +57,15 @@ function submitContact() {
   $.post("/api/submitContact", {
     "title": title,
     "email": email,
-    "body": body
+    "body": body,
+    "csrfmiddlewaretoken": csrf,
+    "recaptchaResponse": recaptchaResponse
   })
   .fail(function(data) {
     console.log("What.");
   })
   .done(function(data) {
-    window.location.href = "/submitted";
+    //window.location.href = "/submitted";
   });
 }
 

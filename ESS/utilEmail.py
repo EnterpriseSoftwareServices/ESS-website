@@ -21,13 +21,14 @@ def sendMail(fro, subject, body):
   sets = settings.EMAIL
   username = sets["email"]#.split("@")[0]
   email_pwd = sets["password"]
-  smtpserver = smtplib.SMTP("smtp.office365.com",587)
+  smtpserver = smtplib.SMTP("smtp.gmail.com",587)
+  to = sets["to"]
 
 
   msg = MIMEMultipart('alternative')
 
   msg['From'] = fro
-  msg['To'] = sets["email"]
+  msg['To'] = to
   msg['Subject'] = subject
   print msg.as_string()
 

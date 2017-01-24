@@ -8,6 +8,7 @@
   <div class="content-inner-small">
   <p>If you would like to contact us for a quote or more information, please use the form below!</p>
   <form class="contactForm">
+    {% csrf_token %}
     <table>
       <tr>
         <td>Title:</td>
@@ -30,8 +31,10 @@
         <td colspan="2"><textarea cols="50" rows="10" id="body"></textarea></td>
       </tr>
     </table>
+    <div class="g-recaptcha" data-sitekey="6LdQDBMUAAAAACBU2c1GoExjVrYJsdri2qbrSP0e" data-callback="enableBtn"></div>
+    <input type="hidden" id="recaptcha-response">
 
-    <button type="button" onclick="submitContact()" class="submitButton">Submit</button>
+    <button type="button" onclick="submitContact()" class="submitButton" disabled="disabled" id="submitButton">Submit</button> <div id="errorMessages"></div>
   </form>
   </div>
 </div>

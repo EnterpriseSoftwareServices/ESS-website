@@ -12,6 +12,11 @@ import settings
 
 import utilEmail
 
+import urllib
+from urllib2 import Request, urlopen
+
+import json
+
 BASE_URL = settings.BASE_URL
 
 # Will normalize any url ending with a slash to one without a slash. 
@@ -43,14 +48,30 @@ def servePage(request, pageName):
 def submitContact(request):
     if ("title" not in request.POST or
         "body" not in request.POST or
-        "email" not in request.POST):
+        "email" not in request.POST or
+        "recaptchaResponse" not in request.POST):
         return HttpResponse("Missing fields", status=400)
 
     subject = request.POST["title"]
     body = request.POST["body"]
     fro = request.POST["email"]
+    response = request.POST["recaptchaResponse"]
+    secret = "6LdQDBMUAAAAAFGyz3Lbe8FpL99Z2WOPD_kn1B_L"
 
-    sendMail(fro, subject, body)
+    url = "https://www.google.com/recaptcha/api/siteverify"
+    post_fields = {"secret": secret, "response": response}
+
+    request = Request(url, urllib.urlencode(post_fields).encode())
+    resp = json.loads(urlopen(request).read().decode())
+    if resp["success"]:
+        try:
+            utilEmail.sendMail(fro, subject, body)
+            return HttpResponse("Worked.", status=200)
+        except Exception as e:
+            print e
+            return HttpResponse("idk", status=400)
+    else:
+        return HttpResponse("Recaptcha failed", status=400)
 
 def redirectToIndex(request):
     return django.shortcuts.redirect(BASE_URL)
