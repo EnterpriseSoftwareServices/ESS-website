@@ -56,7 +56,7 @@ def submitContact(request):
     body = request.POST["body"]
     fro = request.POST["email"]
     response = request.POST["recaptchaResponse"]
-    secret = "6LdQDBMUAAAAAFGyz3Lbe8FpL99Z2WOPD_kn1B_L"
+    secret = settings.RECAPTCHASECRET
 
     url = "https://www.google.com/recaptcha/api/siteverify"
     post_fields = {"secret": secret, "response": response}
