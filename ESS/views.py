@@ -30,7 +30,7 @@ def redirectWithoutSlash(request, urlendpoint=None):
 
 def index(request):
     template = django.template.loader.get_template("index.html")
-    ctxt = {"recaptcha-key": settings.RECAPTCHAPUBLIC}
+    ctxt = {}
     context = RequestContext(request, ctxt)
     html = template.render(context)
     return HttpResponse(html)
@@ -38,9 +38,11 @@ def index(request):
 def servePage(request, pageName):
     try:
         template = django.template.loader.get_template(pageName+".html")
-    except:
+    except Exception as e:
+        print e
+        print pageName
         return redirectToIndex(request)
-    ctxt = {}
+    ctxt = {"recaptchaKey": settings.RECAPTCHAPUBLIC}
     context = RequestContext(request, ctxt)
     html = template.render(context)
     return HttpResponse(html)

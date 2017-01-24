@@ -65,7 +65,7 @@ function submitContact() {
     console.log("What.");
   })
   .done(function(data) {
-    //window.location.href = "/submitted";
+    window.location.href = "/submitted";
   });
 }
 
