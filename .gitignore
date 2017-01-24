@@ -1,0 +1,5 @@
+*.pyc
+*setting*
+*.sqlite3
+*.db
+env/*

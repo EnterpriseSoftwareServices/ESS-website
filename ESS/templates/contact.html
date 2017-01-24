@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block title %}Enterprise Software Services LLC{% endblock %}
+
+{% block content %}
+<div class="content">
+  <span class="head">Contact Form</span>
+  <div class="content-inner-small">
+  <p>If you would like to contact us for a quote or more information, please use the form below!</p>
+  <form class="contactForm">
+    <table>
+      <tr>
+        <td>Title:</td>
+      </tr>
+      <tr>
+        <td><input type="text" id="title"></td>
+      </tr>
+      <tr>
+        <td>Email:</td>
+        <td>Confirm Email:</td>
+      </tr>
+      <tr>
+        <td><input type="text" id="email"></td>
+        <td><input type="text" id="confirmEmail"></td>
+      </tr>
+      <tr>
+        <td>Body:</td>
+      </tr>
+      <tr>
+        <td colspan="2"><textarea cols="50" rows="10" id="body"></textarea></td>
+      </tr>
+    </table>
+
+    <button type="button" onclick="submitContact()" class="submitButton">Submit</button>
+  </form>
+  </div>
+</div>
+
+{% include "footer.html" %}
+{% endblock %}

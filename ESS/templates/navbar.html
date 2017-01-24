@@ -1,0 +1,34 @@
+{% load staticfiles %}
+
+<div class="navbarTop">
+  <div id="logoSect">
+    <div class="miniLogo">
+      <img src="{% static 'img/logo.png' %}" class="logo">
+    </div>
+    <div class="textLogo">
+      <a href="/"><img src="{% static 'img/logo_text.png' %}" class="logo-text"></a>
+    </div>
+  </div>
+  <div id="navbar" class="navOptions">
+    <div id="Services">
+      Services
+      <div class="dropdown" id="dropdown">
+        <div class="navItem miniItem">
+          <a href="/case1">Thing 1</a>
+        </div><br>
+        <div class="navItem miniItem">
+          <a href="/case2">Thing 2</a>
+        </div><br>
+        <div class="navItem miniItem">
+          <a href="/case3">Thing 3</a>
+        </div>
+      </div>
+    </div>
+    <div class="navItem" id="about">
+      <a href="/about">About</a>
+    </div>
+    <div class="navItem" id="contact">
+      <a href="/contact">Contact Us</a>
+    </div>
+  </div>
+</div>
