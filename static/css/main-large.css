@@ -19,7 +19,7 @@ html {
 body {
   margin: 0px;
   width: 100%;
-  background-size: 1600px;
+  height: 100%;
   min-height: 100%;
 }
 
@@ -62,13 +62,13 @@ div.navItem:hover {
 }
 
 .contactForm {
+  position: relative;
   left: -2px;
 }
 
 .content {
   padding: 15px;
   width: 50%;
-  min-height: 600px;
   border-radius: 20px;
   position: relative;
   /*float: right;*/
