@@ -13,8 +13,8 @@
     <link rel="shortcut icon" type="image/png" href="{% static 'img/favicon.png' %}"/>
 </head>
 <body>
-    <div id="background">
     {% include "navbar.html" %}
+    <div id="background">
     {% block content %}{% endblock %}
     </div>
     {% include "footer.html" %}
