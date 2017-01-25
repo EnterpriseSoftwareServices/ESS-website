@@ -70,10 +70,12 @@ div.navItem:hover {
   padding: 15px;
   width: 50%;
   border-radius: 20px;
+  min-height: 10%;
   position: relative;
   /*float: right;*/
   left: 40%;
   margin: 20px;
+  margin-bottom: 160px;
   margin-top: 160px;
 }
 
