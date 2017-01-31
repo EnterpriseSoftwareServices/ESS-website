@@ -34,6 +34,23 @@ a {
   text-decoration: none;
 }
 
+
+h1 {
+  font-family: "Gilroy-bold";
+}
+
+h2 {
+  font-family: "Gilroy-bold";
+}
+
+h3 {
+  font-family: "Gilroy-bold";
+}
+
+h4 {
+  font-family: "Gilroy-bold";
+}
+
 .contactForm {
   position: relative;
 }
@@ -110,4 +127,12 @@ a {
 
   font-family: "Gilroy-light";
   text-align: center;
+}
+
+.weeb {
+  margin-top: -20px;
+  margin-bottom: -20px;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  color: rgba(5,5,8,0.9);
 }

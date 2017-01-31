@@ -68,8 +68,12 @@ div.navItem:hover {
 
 .content .content-inner p{
   padding: 10px;
-  font-size: 1.5em;
+  font-size: 1.3em;
   line-height: 1.8em;
+}
+
+.content .smallerFont {
+  font-size: 1.0em !important;
 }
 
 .content .content-inner-small {
