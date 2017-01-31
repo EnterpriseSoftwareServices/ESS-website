@@ -36,18 +36,22 @@ a {
 
 
 h1 {
+  padding-left: 10px;
   font-family: "Gilroy-bold";
 }
 
 h2 {
+  padding-left: 10px;
   font-family: "Gilroy-bold";
 }
 
 h3 {
+  padding-left: 10px;
   font-family: "Gilroy-bold";
 }
 
 h4 {
+  padding-left: 10px;
   font-family: "Gilroy-bold";
 }
 
@@ -81,7 +85,12 @@ h4 {
 }
 
 .content .head {
+  padding-left: 10px;
   font-family: "Gilroy-light";
+}
+
+#navbar {
+  margin-left: 10px;
 }
 
 .navbarTop {
@@ -97,6 +106,7 @@ h4 {
 
 .navbarTop div .dropdown {
   background-color: rgba(0,0,0,0.9);
+  padding-right: 20px;
 }
 
 .miniItem {

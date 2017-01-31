@@ -116,6 +116,7 @@ div.navItem:hover {
 
 .navbarTop div {
   position: relative;
+  margin-right: 10px;
   font-size: 1.4em;
 }
 
@@ -132,7 +133,6 @@ div.navItem:hover {
   margin-top: 10px;
   margin-left: 0px !important;
   display: none;
-  width: 180px;
   font-size: 0.5em !important;
   z-index: 1000;
 
