@@ -67,7 +67,7 @@ div.navItem:hover {
   margin-right: auto;
 }
 
-.content .content-inner {
+.content .content-inner p{
   padding: 1px;
   font-size: 1.0em;
   line-height: 1.8em;
