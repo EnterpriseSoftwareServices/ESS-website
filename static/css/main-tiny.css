@@ -37,6 +37,7 @@ div.navItem:hover {
   width: 75%;
   border-radius: 20px;
   min-height: 50%;
+  min-width: 320px;
   position: relative;
   left: 10%;
   margin-top: 150px;
