@@ -18,11 +18,11 @@ html {
 }
 
 body {
-  background-image: url('../img/10.png');
-  background-repeat: repeat;
-  background-size: 16px;
+  background-image: url('../img/background4.jpg');
+  background-repeat: no-repeat;
+  background-size: 2880px;
   background-position: center;
-  background-color: #4d535e;
+  background-color: #3A3F47;
 }
 
 form input{
