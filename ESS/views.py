@@ -48,13 +48,15 @@ def servePage(request, pageName):
     return HttpResponse(html)
 
 def submitContact(request):
-    if ("title" not in request.POST or
+    if ("name" not in request.POST or
+        "subject" not in request.POST or
         "body" not in request.POST or
         "email" not in request.POST or
         "recaptchaResponse" not in request.POST):
         return HttpResponse("Missing fields", status=400)
 
-    subject = request.POST["title"]
+    name = request.POST["name"]
+    subject = request.POST["subject"]
     body = request.POST["body"]
     fro = request.POST["email"]
     response = request.POST["recaptchaResponse"]
@@ -67,7 +69,7 @@ def submitContact(request):
     resp = json.loads(urlopen(request).read().decode())
     if resp["success"]:
         try:
-            utilEmail.sendMail(fro, subject, body)
+            utilEmail.sendMail(fro, subject, body, name)
             return HttpResponse("Worked.", status=200)
         except Exception as e:
             print e

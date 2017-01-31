@@ -1,14 +1,16 @@
 {% load staticfiles %}
 <div class="center">
   <div class="navbarTop">
-    <div id="logoSect">
-      <div class="miniLogo">
-        <img src="{% static 'img/logo.png' %}" class="logo">
+    <a href="/">
+      <div id="logoSect">
+        <div class="miniLogo">
+          <img src="{% static 'img/logo.png' %}" class="logo">
+        </div>
+        <div class="textLogo">
+          <img src="{% static 'img/logo_text.png' %}" class="logo-text">
+        </div>
       </div>
-      <div class="textLogo">
-        <a href="/"><img src="{% static 'img/logo_text.png' %}" class="logo-text"></a>
-      </div>
-    </div>
+    </a>
     <div id="navbar" class="navOptions">
       <div id="Services">
         Services

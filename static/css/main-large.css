@@ -1,19 +1,20 @@
 html {
-    overflow: scroll;
-    /*overflow-x: hidden;*/
+  overflow: scroll;
 }
 
 @font-face {
-    font-family: "Gilroy-bold";
-    src: url('../fonts/Gilroy/gilroy-extrabold.otf');
+  font-family: "Gilroy-bold";
+  src: url('../fonts/Gilroy/gilroy-extrabold.otf');
 }
+
 @font-face {
-    font-family: "Gilroy-light";
-    src: url('../fonts/Gilroy/gilroy-light.otf');
+  font-family: "Gilroy-light";
+  src: url('../fonts/Gilroy/gilroy-light.otf');
 }
+
 @font-face {
-    font-family: "Mplus-1m-light";
-    src: url('../fonts/M-1m/mplus-1m-light.ttf');
+  font-family: "Mplus-1m-light";
+  src: url('../fonts/M-1m/mplus-1m-light.ttf');
 }
 
 body {
@@ -28,13 +29,13 @@ body {
   margin-left: auto;
   margin-right: auto;
 }
+
 td {
   padding-top: 5px;
 }
 
 form input{
   margin-top: 3px;
-  font-size: 1em;
   line-height: 1.2em;
   border-radius: 5px;
 }
@@ -42,13 +43,11 @@ form input{
 form textarea {
   margin-top: 3px;
   font-size: 0.9em;
-  line-height: 1em;
   border-radius: 5px;
 }
 
 div.navItem {
   border-bottom: 3px solid rgba(192, 192, 192, 0);
-  /* ^- the important bit. RGB 192,192,192 is the same as #C0C0C0*/
 
   -webkit-transition: border 600ms ease;
   -moz-transition: border 600ms ease;
@@ -72,7 +71,6 @@ div.navItem:hover {
   border-radius: 20px;
   min-height: 10%;
   position: relative;
-  /*float: right;*/
   left: 40%;
   margin: 20px;
   margin-bottom: 160px;
@@ -88,7 +86,6 @@ div.navItem:hover {
   top: 0;
   left: 0;
 
-  font-size: 1em;
   margin-left: auto;
   margin-right: auto;
 }
@@ -127,12 +124,7 @@ div.navItem:hover {
   height: 120px;
   max-width: 100%;
   margin: 0px;
-
-  /*position: absolute;*/
   top: 0px;
-  /*right: 0;*/
-  /*left: 50%;*/
-  /*margin-left: -50%;*/
   margin-left: auto;
   margin-right: auto;
 }
@@ -156,7 +148,7 @@ div.navItem:hover {
   margin-left: 0px !important;
   display: none;
   width: 180px;
-  font-size: 0.4em !important;
+  font-size: 0.5em !important;
   z-index: 1000;
 
 }
@@ -214,6 +206,7 @@ div.navItem:hover {
   margin-left: auto;
   margin-right: auto;
 }
+
 .footer {  
   width: 1100px;
   height: 60px;
@@ -223,7 +216,6 @@ div.navItem:hover {
   right: 0;
   left: 0;
 
-  font-size: 1em;
   padding-top: 20px;
   margin-left: auto;
   margin-right: auto;

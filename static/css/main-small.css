@@ -1,6 +1,5 @@
 html {
-    overflow: scroll;
-    /*overflow-x: hidden;*/
+  overflow: scroll;
 }
 
 body {
@@ -13,26 +12,23 @@ body {
   margin-left: auto;
   margin-right: auto;
 }
+
 td {
   padding-top: 5px;
 }
 
 form input{
-  font-size: 1em;
   line-height: 1.2em;
   border-radius: 5px;
 }
 
 form textarea {
   font-size: 0.9em;
-  line-height: 1em;
   overflow: scroll;
 }
 
 div.navItem {
   border-bottom: 3px solid rgba(192, 192, 192, 0);
-  /* ^- the important bit. RGB 192,192,192 is the same as #C0C0C0*/
-
   -webkit-transition: border 600ms ease;
   -moz-transition: border 600ms ease;
   -ms-transition: border 600ms ease;
@@ -45,16 +41,12 @@ div.navItem:hover {
   border-bottom: 3px solid rgba(192, 192, 192, 1);
 }
 
-.contactForm {
-}
-
 .content {
   padding: 1%;
   width: 75%;
   border-radius: 20px;
   min-height: 50%;
   position: relative;
-  /*float: right;*/
   left: 10%;
   margin-top: 20%;
   margin-bottom: 20%;
@@ -113,12 +105,7 @@ div.navItem:hover {
   height: 120px;
   max-width: 100%;
   margin: 0px;
-
-  /*position: absolute;*/
   top: 0px;
-  /*right: 0;*/
-  /*left: 50%;*/
-  /*margin-left: -50%;*/
   margin-left: auto;
   margin-right: auto;
 }
@@ -142,7 +129,7 @@ div.navItem:hover {
   margin-left: 0px !important;
   display: none;
   width: 180px;
-  font-size: 0.4em !important;
+  font-size: 0.5em !important;
   z-index: 1000;
 
 }
@@ -163,9 +150,6 @@ div.navItem:hover {
   height: 134px;
   border-bottom-right-radius: 7px;
   border-bottom-left-radius: 7px;
-}
-
-#Services {
 }
 
 .textLogo {
@@ -199,6 +183,7 @@ div.navItem:hover {
   margin-left: auto;
   margin-right: auto;
 }
+
 .footer {  
   bottom: 0;
   right: 0;

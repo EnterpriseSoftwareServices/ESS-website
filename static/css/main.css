@@ -1,19 +1,20 @@
 html {
-    overflow: scroll;
-    /*overflow-x: hidden;*/
+  overflow: scroll;
 }
 
 @font-face {
-    font-family: "Gilroy-bold";
-    src: url('../fonts/Gilroy/gilroy-extrabold.otf');
+  font-family: "Gilroy-bold";
+  src: url('../fonts/Gilroy/gilroy-extrabold.otf');
 }
+
 @font-face {
-    font-family: "Gilroy-light";
-    src: url('../fonts/Gilroy/gilroy-light.otf');
+  font-family: "Gilroy-light";
+  src: url('../fonts/Gilroy/gilroy-light.otf');
 }
+
 @font-face {
-    font-family: "Mplus-1m-light";
-    src: url('../fonts/M-1m/mplus-1m-light.ttf');
+  font-family: "Mplus-1m-light";
+  src: url('../fonts/M-1m/mplus-1m-light.ttf');
 }
 
 body {
@@ -31,12 +32,6 @@ form input {
 a {
   color: white;
   text-decoration: none;
-}
-
-div.navItem {
-}
-
-div.navItem:hover {
 }
 
 .contactForm {
@@ -72,9 +67,6 @@ div.navItem:hover {
   font-family: "Gilroy-light";
 }
 
-.navOptions {
-}
-
 .navbarTop {
   background-color #1B1D21;
   color: #C8C8C8;
@@ -86,14 +78,8 @@ div.navItem:hover {
   color: white;
 }
 
-.miniLogo .logo {
-}
-
 .navbarTop div .dropdown {
   background-color: rgba(0,0,0,0.9);
-}
-
-.dropdown div {
 }
 
 .miniItem {
@@ -105,17 +91,8 @@ div.navItem:hover {
   display: inline-block;
 }
 
-#Services {
-}
-
 .textLogo {
   display: inline-block;
-}
-
-.textLogo .logo-text {
-}
-
-.g-recaptcha {
 }
 
 .contactForm #errorMessages {

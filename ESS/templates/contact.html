@@ -11,28 +11,30 @@
     {% csrf_token %}
     <table>
       <tr>
-        <td>Title:</td>
+        <td>Name:</td>
       </tr>
       <tr>
-        <td><input type="text" id="title"></td>
+        <td><input type="text" id="name"></td>
+      </tr>
+      <tr>
+        <td>Subject:</td>
+      </tr>
+      <tr>
+        <td><input type="text" id="subject"></td>
       </tr>
       <tr>
         <td>Email:</td>
-      </tr>
-      <tr>
-        <td><input type="text" id="email"></td>
-      </tr>
-      <tr>
         <td>Confirm Email:</td>
       </tr>
       <tr>
+        <td><input type="text" id="email"></td>
         <td><input type="text" id="confirmEmail"></td>
       </tr>
       <tr>
         <td>Body:</td>
       </tr>
       <tr>
-        <td colspan="2"><textarea cols="50" rows="10" id="body"></textarea></td>
+        <td colspan="2"><textarea cols="47" rows="10" id="body"></textarea></td>
       </tr>
     </table>
     <div class="g-recaptcha" data-sitekey="{{recaptchaKey}}" data-callback="enableBtn"></div>

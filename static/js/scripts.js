@@ -24,7 +24,8 @@ function displayErrorMessage(msg) {
 };
 
 function submitContact() {
-  var title = $('#title').val();
+  var name = $('#name').val();
+  var subject = $('#subject').val();
   var email = $('#email').val();
   var confirmEmail = $('#confirmEmail').val();
   var body = $('#body').val();
@@ -32,8 +33,13 @@ function submitContact() {
 
   var recaptchaResponse = $('#recaptcha-response').val();
 
-  if (title == "") {
-    displayErrorMessage("Please enter a title for the email");
+  if (name == "") {
+    displayErrorMessage("Please enter your name!");
+    return
+  }
+
+  if (subject == "") {
+    displayErrorMessage("Please enter a subject for the email!");
     return
   }
 
@@ -52,10 +58,9 @@ function submitContact() {
     return
   }
 
-  console.log(title)
-  console.log(body)
   $.post("/api/submitContact", {
-    "title": title,
+    "name": name,
+    "subject": subject,
     "email": email,
     "body": body,
     "csrfmiddlewaretoken": csrf,

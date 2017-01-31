@@ -17,7 +17,7 @@ import threading
 # Simply establishes a connectoin to the mailserver and
 # based on input args will send the email.
 # Should not do any constructing or formatting.
-def sendMail(fro, subject, body):
+def sendMail(fro, subject, body, name):
   sets = settings.EMAIL
   username = sets["email"]#.split("@")[0]
   email_pwd = sets["password"]
@@ -32,11 +32,15 @@ def sendMail(fro, subject, body):
   msg['Subject'] = subject
   print msg.as_string()
 
-  body = "Email from: "+fro+"\n\n\n\nBody:\n" + body
+  body = """
+Email from: %s
+Name: %s
+
+
+Body: %s""" % (fro, name, body)
 
   msg.attach( MIMEText(body, "text", "utf-8"))
 
-  #smtpserver.set_debuglevel(1)
   smtpserver.ehlo()
   smtpserver.starttls()
   smtpserver.login(username, email_pwd)    

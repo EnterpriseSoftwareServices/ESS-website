@@ -19,7 +19,6 @@ from django.contrib import admin
 import views
 
 urlpatterns = [
-    #url(r'^supersecretadminpage$', admin.site.urls),
     url(r'^(?P<urlendpoint>.*)\/$', views.redirectWithoutSlash),
     url(r'^$', views.index),
 
