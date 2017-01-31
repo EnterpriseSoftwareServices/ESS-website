@@ -25,8 +25,16 @@ body {
   background-color: #4d535e;
 }
 
-form input {
+form input{
   font-family: "Cambria";
+  font-size: 1.1em;
+  line-height: 1.2em;
+  border-radius: 5px;
+}
+
+form textarea {
+  font-size: 0.9em;
+  overflow: scroll;
 }
 
 a {

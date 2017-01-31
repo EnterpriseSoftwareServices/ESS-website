@@ -17,16 +17,6 @@ td {
   padding-top: 5px;
 }
 
-form input{
-  line-height: 1.2em;
-  border-radius: 5px;
-}
-
-form textarea {
-  font-size: 0.9em;
-  overflow: scroll;
-}
-
 div.navItem {
   border-bottom: 3px solid rgba(192, 192, 192, 0);
 
